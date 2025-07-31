@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Prompts de IA</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand">
+                <i class="bi bi-robot"></i>
+                Gestor de Prompts
+            </a>
+            <div class="nav-links d-flex justify-content-center gap-3 mb-4">
+                <a href="/" class="nav-link active btn btn-success">
+                    <i class="bi bi-collection"></i> Mis Prompts
+                </a>
+                <a href="/generator" class="nav-link btn btn-success">
+                    <i class="bi bi-magic"></i> Generador
+                </a>
+                <a href="/tareas" class="nav-link btn btn-success">
+                    <i class="bi bi-list-task"></i> Tareas con IA
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="main-content">
+                    <div class="main-header text-white text-center py-4" style="background: var(--gradient-primary); border-radius: 0.75rem 0.75rem 0 0;">
+                        <h2><i class="bi bi-collection me-2"></i>Gestor de Prompts</h2>
+                        <p class="mb-0 opacity-75">Organiza y gestiona todos tus prompts de IA</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <!-- Botones de acción -->
+                        <div class="d-flex justify-content-center gap-3 mb-4">
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newPromptModal">
+                                <i class="bi bi-plus-lg me-2"></i>Nuevo Prompt
+                            </button>
+                            <a href="/generator" class="btn btn-primary">
+                                <i class="bi bi-magic me-2"></i>Generar prompt
+                            </a>
+
+                            <button class="btn btn-outline-success btn-sm" id="exportCsvBtn">
+                                <i class="bi bi-download me-2"></i>Exportar CSV
+                            </button>
+                            <button class="btn btn-outline-primary btn-sm" id="importCsvBtn">
+                                <i class="bi bi-upload me-2"></i>Importar CSV
+                            </button>
+                            <input type="file" id="csvFileInput" accept=".csv" style="display: none;">
+                        </div>
+
+                        <!-- Filtros -->
+                        <div class="form-section">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <h5><i class="bi bi-funnel me-2"></i>Filtros de Búsqueda</h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex justify-content-end gap-2 mb-4">Hay <span id="totalPrompts"></span> prompts disponibles</div>
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="searchInput" class="form-label">Buscar prompts</label>
+                                    <input type="text" id="searchInput" class="form-control" placeholder="Buscar por título o contenido...">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="categoryFilter" class="form-label">Categoría</label>
+                                    <select id="categoryFilter" class="form-select">
+                                        <option value="">Todas las categorías</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 d-flex align-items-end">
+                                    <button class="btn btn-outline-secondary w-100" id="filterBtn">
+                                        <i class="bi bi-funnel"></i> Filtrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lista de prompts -->
+                        <div class="form-section">
+                            <h5><i class="bi bi-list-ul me-2"></i>Mis Prompts</h5>
+                            <div id="promptsList" class="prompt-list">
+                                <!-- Prompts will be loaded here by JavaScript -->
+                                <div class="text-center my-5 py-5">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                    <p class="mt-3">Cargando tus prompts...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Edit Prompt Modal -->
+    <div class="modal fade" id="editPromptModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Prompt</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="editPromptForm">
+                    <div class="modal-body">
+                        <input type="hidden" id="editPromptId">
+                        <div class="mb-3">
+                            <label for="editTitle" class="form-label">Título</label>
+                            <input type="text" class="form-control" id="editTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editText" class="form-label">Texto del Prompt</label>
+                            <textarea class="form-control" id="editText" rows="6" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editCategory" class="form-label">Categoría</label>
+                            <select class="form-select" id="editCategory" required>
+                                <option value="">Selecciona una categoría</option>
+                                <option value="aprendizaje">Aprendizaje</option>
+                                <option value="desarrollo">Desarrollo</option>
+                                <option value="creatividad">Creatividad</option>
+                                <option value="productividad">Productividad</option>
+                                <option value="negocios">Negocios</option>
+                                <option value="personal">Personal</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Prompt Modal -->
+    <div class="modal fade" id="newPromptModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuevo Prompt</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="newPromptForm">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="newTitle" class="form-label">Título</label>
+                            <input type="text" class="form-control" id="newTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newText" class="form-label">Texto del Prompt</label>
+                            <textarea class="form-control" id="newText" rows="6" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newCategory" class="form-label">Categoría</label>
+                            <select class="form-select" id="newCategory" required>
+                                <option value="">Selecciona una categoría</option>
+                                <option value="aprendizaje">Aprendizaje</option>
+                                <option value="desarrollo">Desarrollo</option>
+                                <option value="creatividad">Creatividad</option>
+                                <option value="productividad">Productividad</option>
+                                <option value="negocios">Negocios</option>
+                                <option value="personal">Personal</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+</body>
+</html>

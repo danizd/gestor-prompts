@@ -1,0 +1,196 @@
+"ID";"Título";"Texto";"Categoría";"Fecha de Creación"
+1;"Reto de Entrenamiento de la Semana";"Eres un experto preparador físico. Yo soy [menciona detalladamente el problema al que te enfrentas con contexto]. Genera un ""Reto de entrenamiento de la semana"" desafiante pero atractivo, centrado en [menciona el objetivo de fitness]. Asegúrate de que sea adecuado para alguien con acceso a [menciona el equipo disponible o sin equipo]. Quiero que [menciona cómo quieres el resultado en detalle con ejemplos].";"personal";
+2;"Principio de Pareto";"Actúa como un estratega de aprendizaje utilizando el principio 80/20 para acelerar el aprendizaje en [tema o habilidad]. Identifica el 20% de [conceptos o actividades] que producirán el 80% de los resultados, y proporciona estrategias para enfocarse en estas áreas de alto impacto. Incluye consejos para identificar áreas clave y maximizar la eficiencia.";"aprendizaje";
+3;"Repetición Espaciada";"Actúa como un experto en retención de memoria utilizando la técnica de repetición espaciada y ayúdame a diseñar un calendario de repetición para aprender [tema/área]. Proporciona un plan detallado para incorporar esta técnica en una rutina de estudio diaria, incluyendo herramientas recomendadas y consejos de programación.";"aprendizaje";
+4;"Técnica de Interleaving";"Actúa como un planificador de estudio y ayúdame a diseñar un plan de estudio intercalado para [tema específico]. Mezcla diferentes materias y habilidades dentro de [área del tema]. Identifica los principales subtemas, sugiere un calendario semanal e incluye estrategias para alternar entre estos subtemas para maximizar la retención y comprensión.";"aprendizaje";
+5;"Aprendizaje Activo";"Actúa como un coach de aprendizaje para incorporar estrategias de aprendizaje activo en el estudio de [tema o materia]. Proporciona ejemplos específicos de actividades como la resolución de problemas, la discusión, la enseñanza a otros y la aplicación de conceptos en escenarios prácticos. Formula preguntas que fomenten el pensamiento crítico y la aplicación del conocimiento para obtener una comprensión más profunda de [tema/materia].";"aprendizaje";
+6;"Técnica Feynman";"Actúa como un coach de aprendizaje y ayúdame a utilizar la Técnica Feynman para dominar [tema específico]. Guíame en desglosar el tema, enseñarlo de manera simple, identificar lagunas y refinar mi comprensión. Proporciona un ejemplo de aplicación de esta técnica a un concepto dentro del tema.";"aprendizaje";
+7;"Wireframes y Flujos de Usuario para Aplicación Bancaria";"Crea wireframes y flujos de usuario para una aplicación bancaria móvil dirigida a personas mayores. El diseño debe tener en cuenta [los retos habituales a los que se enfrentan las personas mayores cuando utilizan aplicaciones móviles], [las funciones bancarias específicas a las que dan prioridad] y [los elementos o temas de diseño visual preferidos].";"desarrollo";
+8;"Requisitos del RGPD para Pequeñas Empresas";"Actúa como un especialista en privacidad de datos. Resume los requisitos del Reglamento General de Protección de Datos (RGPD) para una pequeña empresa. A continuación, elabora un plan detallado y una política de privacidad exhaustiva para que una pequeña empresa cumpla la normativa.";"negocios";
+9;"Automatización de Tareas en Negocios";"Mi negocio es [describe tu negocio] y mis tareas incluyen [describe las tareas en tu rol]. Para cada tarea, pregunta cómo se está completando actualmente esta tarea y determina si esta tarea podría ser automatizada. Una vez identifiquemos las tareas que podrían beneficiarse de la automatización, crea una tabla de 3 columnas con estos encabezados: tarea, proceso actual, proceso con automatización. En la columna 2, detalla estos procesos y en la columna 3 crea un plan sobre cómo cada tarea podría ser automatizada. Este enfoque estructurado me ayudará a automatizar mi negocio o a prepararme para trabajar con un experto en IA para implementar automatización que ahorre tiempo.";"negocios";
+10;"Novela";"Ayúdame a estructurar una subtrama para mi novela. La historia principal trata sobre [indica la trama principal de tu novela], pero quiero introducir una subtrama que implique a [especifica personajes o temas, por ejemplo, ""el hermano separado del protagonista"", ""un artefacto misterioso""]. Esta subtrama debería tocar temas como [menciona los temas que quieres explorar, por ejemplo, ""redención"", ""amor prohibido""].";"creatividad";
+11;"Campaña publicitaria";"Crea una campaña publicitaria sobre [empresa, producto o servicio] dirigida a [audiencia objetivo]. Incluye mensajes clave y eslóganes y elige los mejores canales de medios para las promociones.";"negocios";
+12;"Analiza sector";"Analiza el estado actual de [inserta aquí el sector] y sus tendencias, retos y oportunidades, incluyendo datos y estadísticas relevantes. Proporciona una lista de los principales actores y una previsión del sector a corto y largo plazo, y explica cualquier posible repercusión de los acontecimientos actuales o futuros.";"negocios";
+13;"Orientación profesional";"Quiero que actúes como orientador profesional. Te proporcionaré una persona que busca orientación para su vida profesional, y tu tarea consistirá en ayudarla a determinar qué carreras son las más adecuadas para ella en función de sus aptitudes, intereses y experiencia. También debes investigar las distintas opciones disponibles, explicar las tendencias del mercado laboral en los distintos sectores y aconsejar sobre qué cualificaciones serían beneficiosas para seguir determinados campos. Mi primera petición es: ""Quiero asesorar a alguien que quiere seguir una posible carrera en [introducir sector/cargo].""";"personal";
+14;"Scripts Python";"Eres un desarrollador de software experto en Python. Dame el código de un script Python para obtener datos de una API, ordenarlos, procesarlos, limpiarlos e introducirlos en una base de datos MongoDB. Afortunadamente, cuentas con la ayuda de un asistente de desarrollo de software que te guiará en todo el proceso.";"desarrollo";
+15;"Programa en React";"Eres un desarrollador de software experto en Python. Dame el código de un script Python para obtener datos de una API, ordenarlos, procesarlos, limpiarlos. Quiero que actúes como desarrollador frontend sénior. Describiré los detalles de un proyecto que codificará con estas herramientas: Create React App, yarn, Ant Design, List, Redux Toolkit, createSlice, thunk, axios. Debe fusionar archivos en un solo archivo index.js y nada más. No escriba explicaciones. Mi primera solicitud es «Crear una aplicación Pokémon que enumere Pokémon con imágenes que provienen del punto final de sprites de PokeAPI».";"desarrollo";
+16;"Música y Letras";"Quiero que actúes como un compositor. Te proporcionaré la letra de una canción y tú crearás música para ella. Esto podría incluir el uso de varios instrumentos o herramientas, como sintetizadores o samplers, para crear melodías y armonías que den vida a la letra.";"creatividad";
+17;"Crea libros";"Crea un libro; inspirado y basado en (palabra clave), (descripción de lo que quieres) con el objetivo de (educar),con un estilo de escritura (narrativo) con tono (formal).
+El libro tendrá:
+1 prólogo.
+1 introducción.
+(7) capítulos.
+1 conclusión.
+1 descripción para promocionar el libro
+Me entregarás el libro en partes distintas y cada parte la entregarás en distintas ventanas.
+En cada capítulo quiero que se expliquen bien los temas, profundizar en cada tema.
+Crea texto libre de problemas de plagio no textos con derechos de autor y humanizado.
+Si usas textos o frases de terceros debes citar la fuente directamente.
+Antes de comenzar preséntame el índice y 10 ideas para el título del libro y espera mi aprobación.
+Después de mi aprobación comienza a escribir el libro automáticamente.";"creatividad";
+18;"Generar textos largos";"Créame una historia sobre un espartano que gana una batalla muy difícil, haz que sea épica y empieza por la pagina 1/5, yo te iré indicando en los siguientes prompt el cambio de pagina, debes hacer que los cambios de pagina tengan sentido haciendo hincapié en el final de una pagina y el inicio de la siguiente";"creatividad";
+19;"Plan de Aprendizaje Personalizado";"Ayúdame a diseñar un plan de aprendizaje personalizado para dominar [materia]. Divídelo en tareas de aprendizaje diarias, recursos recomendados y ejercicios prácticos que pueda hacer para desarrollar mis habilidades.";"aprendizaje";
+20;"Prompts optimizados mediante generador openai";"Este es tu entrenamiento.
+[prompt entrenamiento generado por openai]
+Empieza una conversación conmigo para 
+[prompt inicial]";"productividad";
+21;"Una imagen basada en lo que chatgpt sabe de ti";"Based on what you know about me. Draw a picture of what you think my alter-egos life looks like.";"creatividad";
+22;"Biblioteca de Prompts de Anthropic";"https://docs.anthropic.com/es/prompt-library/library";"otros";
+23;"ANALOGÍAS";"Escribe una breve e impactante analogia que refuerce la idea que te paso 
+Objetivo: tu objetivo es sorprender al lector y enseñarle algo valioso para su vida
+Contexto: Eres un creador de textos especializado en analogías muy ocurrente y creativo
+Ejemplos: Un ejemplo sería el siguiente: LA idea principal seria: ""El amor de pareja es importante pero no es lo único importante "". LA analogia sería la siguiente: ""Un persona que se pasa el dia leyendo novelas de amor, viendo peliculas romanticas, escuchando canciones de amor etc. pensara que el amor y las relacion de pareja sera lo mas importante en la vida igual que una persona que vive delante de un tanatorio y se pasa el dia mirando para el tanatorio pensara que todo el mundo se muere. Por eso es mejor libros de diferentes temáticas y ver películas de distintos generos, para tener una perspectiva mas global de las cosas importantes""
+Persona: Eres un creador de textos especializado en analogías muy ocurrente y creativo
+Tono de Voz: Debe tener un tono inspirador, motivador, reflexivo e ingenioso
+Audiencia: Va dirigido principalmente a un publico adolescente. Primero debes preguntarme por la idea principal que debe reforzar la analogia que redactes";"creatividad";
+24;"Crear un Plan de Proyecto";"Como gerente de proyecto, soy responsable de [ejemplo de proyecto]. El proyecto está planificado para abarcar [agregar duración] e involucra múltiples departamentos como diseño, desarrollo y marketing [agregar contexto]. Por favor, genera un plan de proyecto integral que incluya objetivos, caso de negocio, alcance, cronograma, partes interesadas y métricas de éxito en un [insertar formato de salida].";"productividad";
+25;"El creador de prompts";"Contexto: Vamos a diseñar uno de los mejores prompts jamás creados para ChatGPT. Los mejores prompts incluyen todos los detalles necesarios para informar al modelo de lenguaje sobre: los objetivos del prompt, las áreas de conocimiento requeridas, los temas específicos que debe dominar, el formato preferido, el público al que va dirigido, referencias, ejemplos y el enfoque más adecuado para cumplir el propósito. Con esta información y los detalles que vienen a continuación, podrás crear un prompt verdaderamente excepcional.
+Rol: Eres un experto en la creación de prompts para modelos de lenguaje. Tu especialidad es diseñar prompts extremadamente detallados que generan respuestas mucho más completas y efectivas de lo que suelen ofrecer los modelos habituales. Los prompts que creas no dejan lugar a dudas, ya que son cuidadosamente elaborados y extremadamente completos.
+Acciones:
+1. Antes de empezar a escribir este prompt, primero necesitas recibir el tema o la idea principal. Si no te proporciono el tema o la idea, por favor, pídelos.
+2. Una vez que tengas claro el tema o la idea, revisa también el formato y el ejemplo que te proporcionaré más adelante.
+3. Si es necesario, incluye elementos en el prompt que puedan completarse más tarde según las necesidades del usuario, como espacios en blanco o secciones para personalizar.
+4. Tómate un momento, respira hondo y avanza paso a paso.
+5. Cuando hayas procesado toda la información, escribe el mejor prompt que se haya creado jamás.
+Formato: Para organizar el contenido, utilizaremos un acrónimo llamado “C.R.A.F.T.”, donde cada letra representa una sección del prompt. Las descripciones de cada sección para el desarrollo del prompt son las siguientes:
+Contexto: En esta sección se describe el contexto actual que define la situación para la cual se necesita el prompt. Su propósito es ayudar al modelo a comprender qué conocimientos y experiencia debe tener en cuenta para crear el prompt.
+Rol: Aquí se define el tipo de experiencia que tiene el modelo, sus habilidades y su nivel de especialización en relación con el prompt solicitado. En todos los casos, el rol descrito debe corresponder a un experto líder en el sector, con más de dos décadas de experiencia relevante y reconocido por su autoridad en el tema.
+Acción: Se refiere a las acciones que el prompt le pedirá al modelo que realice. Debería consistir en una lista numerada de pasos secuenciales, diseñados para que el modelo los siga y logre el mejor resultado posible.
+Formato: Esta sección determina la disposición o el estilo en el que se organizará el contenido generado por el modelo. Define cómo se estructurará la información para adaptarse a las preferencias o necesidades del usuario. Los formatos pueden incluir: un ensayo, una tabla, un lenguaje de programación, texto plano, markdown, un resumen, una lista, etc.
+Público objetivo (target audience): Esta sección describe quién será el destinatario final del contenido generado por el prompt. Puede incluir información demográfica, ubicación geográfica, idioma, nivel de lectura, preferencias y otros detalles relevantes.
+Público objetivo: El destinatario principal de este prompt es ChatGPT 4.0 o ChatGPT O1.";"productividad";
+26;"Pensamiento creativo";"Quiero potenciar mis habilidades de pensamiento creativo a través de ejercicios divertidos y poco convencionales. Sugiere una mezcla de acertijos, desafíos de pensamiento lateral y prompts de narración de historias que me empujen a pensar de forma innovadora. Incluye ejercicios inspirados en mentes creativas famosas como Da Vinci, Einstein o Picasso. Además, recomienda métodos interactivos como mapas mentales, juegos de rol o el uso de asociaciones aleatorias de palabras para generar nuevas ideas. Bonus: ¡Dime un desafío de creatividad diario único para los próximos 7 días!";"creatividad";
+27;"Estilos de imagen";"Estudio Ghibli: Este es el estilo que ha hecho famosa la herramienta para reimaginar fotos de ChatGPT, y ha causado un auténtico boom.
+Francisco Ibáñez: Desde Mortadelo y Filemón hasta Rue del Percebe. Ibáñez siempre ha tenido un estilo muy particular que le va a dar a tus fotos un toque muy clásico español.
+Muppets: Efectivamente, puedes convertirte en un teleñeco mantenga algunas facciones tuyas en la imagen resultante.
+Dragon Ball Z: Si escribes que quieres un dibujo a lo Toriyama, no vas a poder hacerlo por copyright, pero puedes pedirle un dibujo al estilo Dragon Ball Z o Arale para tener tu foto con el aspecto de estas series.
+Akira: El primer gran clásico del anime, también vas a poder experimentar con este estilo más oscuro y sucio en tus fotos.También puedes pedirle que lo haga a color.
+Estilo caricatura: Si quieres exagerar tus facciones puedes usar el estilo de caricatura, como la de los artistas callejeros.
+Pop Art: El estilo tan particular nacido a mediados del Siglo XX también puede darte un aspecto increíble en las fotos.
+Pixel Art: Nada como bucar el estilo pixelado de los videojuegos antiguos. Vas a poder especificar que sea de 8 bits, 16 bits o 32 bits para tener un extra.
+Dibujo hecho a lápiz: Este estilo es bastante más tenue y personal. El resultado seguirá sin ser exactamente tú, pero el filtro hará que la imagen tenga ese toque más artesanal.
+South Park: Cabezones y con los ojos muy grandes, este estilo te dará un toque de humor.
+Simpsons: Cómo no íbamos a experimentar con esto y meternos de lleno en el mundo de Springfield. Los resultados son tronchantes.
+Pixar: Pixar es una de las empresas de animación con un estilo más marcado, y este lo vas a poder imprimir también en tus fotos.
+One Piece: Otro manga y anime con una estética muy muy particular que podrás ver reflejada en la reimaginación de la foto.
+Snoopy: Estas facciones también le van a quedar muy divertidas, parecerás un amigo de Charlie Brown.
+Shin Chan: Los más pequeños van a disfrutar especialmente de este otro estilo basado en la clásica animación.
+Cómic: Un estilo más genérico, pero que te dará también un aspecto similar a los diseños de Marvel o DC entre otros.
+Muñeco de acción: Puedes convertir tu foto en un muñeco de acción que aparecerá en su caja, y puedes hacer que tenga texto y complementos.
+Fantasía épica: No es un estilo definido, pero tendrás un estilo perfecto y acorde con las ilustraciones de fantasía épica.";"creatividad";
+28;"Descripción de una persona en base a varias fotos";"Eres un experto fisonomista de nivel mundial. Además, eres un excelente escritor, especialmente por tus descripciones de personajes, reales o ficticios. Estas imágenes corresponden a una persona que saldrá en un libro o novela, etc. Debes describirlo con todo detalle, incluyendo su origen más probable, una descripción de rasgos físicos digna de ser presentada en universidades de todo el mundo, de cómo debe describirse a una persona, no solo físicamente, sino también especulando con cómo es la vida de esa persona, pero siempre sobre una base científica y rigurosa";"creatividad";
+29;"Análisis competitivo de empresa";"Analiza el panorama competitivo para Sixtema dentro de la industria del sector tic. Identifica competidores clave (incluyendo empresas privadas), su participación de mercado y principales diferenciadores. Destaca cualquier cambio reciente en la industria como fusiones, adquisiciones, cambios regulatorios o innovaciones notables de productos. Además, obtén informes y estadísticas de la industria disponibles públicamente relacionados con Sixtema y el sector más amplio de sector tic. Resume puntos de datos clave que proporcionen información sobre la dinámica del mercado, tendencias de crecimiento y el panorama competitivo en evolución.";"negocios";
+30;"Fuentes de ingresos";"Quiero que me ayudes a identificar y desarrollar una fuente de ingresos rápida utilizando mis habilidades actuales y las herramientas de IA.
+Aquí está mi información personal:
+- Mis habilidades principales: [enumera 2-3 habilidades que domines]
+- Tiempo disponible por semana: [número de horas]
+- Herramientas a mi disposición: [ordenador, smartphone, etc.]
+- Presupuesto para empezar: [cantidad que puedes invertir, incluso 0€]
+Paso 1: Propónme 3 ideas de servicios que podría vender desde mañana en plataformas como Fiverr, Upwork o directamente a empresas locales. Estos servicios deben:
+- Poder realizarse principalmente con la ayuda de herramientas de IA
+- Responder a una necesidad urgente y recurrente de los clientes
+- No requerir cualificaciones adicionales
+- Poder facturarse mínimo 50€ por servicio
+Paso 2: Para la idea que te parezca más prometedora, detalla:
+- El servicio exacto y su título atractivo
+- El precio recomendado (con justificación)
+- La descripción comercial del servicio (aproximadamente 200 palabras)
+- 5 ejemplos concretos de clientes potenciales y cómo abordarlos
+- Una metodología paso a paso para realizar este servicio eficientemente con IA
+- Los prompts específicos a utilizar para cada etapa
+Paso 3: Créame un plan de acción de 7 días con tareas diarias precisas para:
+- Establecer mi oferta
+- Encontrar mis 3 primeros clientes
+- Entregar el servicio con excelencia
+- Obtener testimonios y referencias";"negocios";
+31;"Entrena a ChatGPT para que genere prompts";"Actúa como un ingeniero de prompts de clase mundial. Tu trabajo es ayudarme a generar prompts poderosos y de alto impacto adaptados a mis necesidades. Primero, pregúntame qué estoy tratando de lograr. Luego, haz algunas preguntas inteligentes de seguimiento para aclarar el contexto, el tono, las herramientas que estoy usando y mi formato de salida ideal. Una vez que entiendas mi objetivo, dame 3 variaciones de prompt: una básica, una creativa y una de nivel experto, todas diseñadas para obtener la mejor respuesta posible de ChatGPT u otras herramientas de IA. Asegúrate de que los prompts sean claros, flexibles y fáciles de reutilizar. Al final, ofrece una sugerencia para hacer que el prompt sea aún mejor la próxima vez.";"productividad";
+32;"Fallos en argumentación y sesgos cognitivos de un texto";"Analiza críticamente este artículo e identifica cualquier sesgo cognitivo, falacia lógica o error de razonamiento presente. Especifica el tipo de sesgo o falacia (por ejemplo, sesgo de confirmación, falacia ad populum, hombre de paja, etc.), explica cómo se manifiesta en el texto y evalúa su impacto en la validez de los argumentos presentados.";"creatividad";
+33;"Drupal, generar módulo custom";"Eres experto en drupal 10 y en la creación de modulos custom.
+Dame el codigo para crear un modulo custom en drupal 10   cuya finalidad sea mostrar los nodos asociados a la taxonomia Ofertas de emprego (Nome de sistema: ofertas_emprego). Este vocabulario de taxonomia tine muchos terminos organizados en un arbol de categorias de 4 niveles.
+Lo que debe hacer el modulo concretamente es:
+1.- El modulo debera crear una página custom en la que se recupere el id de la taxonomia de la url.
+2.- Se hara una consulta a base de datos para obtener los nodos asociados a esa categoria y las categorías hija si las tiene
+3.- Si el término de taxonomía no tiene categorías hijos solo cargara los nodos asociados. En concreto se deberan cargar los nodos de tipo ""ofertas_de_emprego"" y mostrar los campos Título, Data da oferta	 (field_data_da_oferta) Documento (field_documento de tipo archivo)
+4.- Si el término de taxonomía tiene uno o mas categorías hijos cargara sus nodos asociados de tipo ""ofertas_de_emprego"" y ademas las categorías hijo con sus correspondientes nodos asociados de tipo ""ofertas_de_emprego"" distinguiendo entre los diferentes niveles
+Crea un diagrama de flujo que represente la Fase 1 de un proyecto de portal web entre un cliente y la empresa Dixtema. El diagrama debe mostrar las siguientes etapas e interacciones:
+Fase 1: Planificación y Definición 
+1.1. Recopilación de requisitos iniciales  
+1.2. Definición de requisitos operacionales y técnicos  
+1.3. Elaboración de informe de mejoras propuestas  
+1.4. Consenso y definición de requisitos funcionales definitivos con Gain  
+1.5. Diseño de arquitectura de información y funcionalidades  
+1.6. Planificación de seguimiento y comunicación  
+El diagrama debe incluir los siguientes elementos visuales:
+Cajas de texto: Para representar cada etapa del proceso.
+Flechas: Para indicar el flujo de información y las interacciones entre las etapas.
+Iconos: Para ilustrar las diferentes actividades (reuniones, documentos, etc.).
+Conexiones: Debe mostrar las conexiones entre el cliente, Dixtema y la base de datos vectorial.
+Palabras clave: Incluye palabras clave como ""Reuniones"", ""Requisitos"", ""Propuesta"", ""Informe"".
+El diagrama debe ser claro, conciso y fácil de entender, y debe utilizar una combinación de texto e imágenes para transmitir la información de manera efectiva.
+Dame párrafos sencillos para explican la situación la situación del proyecto. En concreto dame los textos *AVANCE TÉCNICO*, *RIESGOS* *ANÁLISIS DE DESVÍOS (ECONÓMICO Y/O PLAZOS)*. En este caso ya pudimos continuar con el desarrollo. En este caso 
+*AVANCE TÉCNICO*
+*RIESGOS*
+*ANÁLISIS DE DESVÍOS (ECONÓMICO Y/O PLAZOS)*";"desarrollo";
+34;"Control del estres";"Me siento abrumado por  el trabajo. Ayúdame a aplicar el principio 80/20 para identificar el pequeño conjunto de tareas, hábitos, responsabilidades o patrones de pensamiento que están creando la mayor parte del estrés. Empieza por hacer preguntas aclaratorias si es necesario, y luego haz una lista de las principales fuentes de estrés en orden de impacto. Para cada una, sugiere una forma de eliminarla, delegarla, automatizarla o simplificarla, sin crear más caos. Termina con un cambio pequeño pero poderoso que pueda implementar este fin de semana para reducir mi estrés al menos en un 20 %.";"personal";
+35;"Creador de prompts en base a preguntas";"Quiero que te conviertas en mi ingeniero de Prompts. Tu objetivo es ayudarme a crear el mejor prompt posible para mis necesidades.
+Seguirás el siguiente proceso:
+1. Tu primera respuesta será preguntarme sobre qué debe tratar el prompt. Proporcionaré mi respuesta, pero necesitaremos mejorarla a través de iteraciones continuas siguiendo los próximos pasos.
+2. Basado en mi aporte, generarás 2 secciones, a) Prompt revisado (proporciona tu prompt reescrito, debe ser claro, conciso y fácilmente entendido por ti), b) Preguntas (haz cualquier pregunta relevante relacionada con qué información adicional necesitas de mí para mejorar el prompt).
+3. Continuaremos este proceso iterativo conmigo proporcionándote información adicional y tú actualizando el prompt en la sección de Prompt revisado hasta que yo diga que hemos terminado.";"aprendizaje";
+36;"Indispensable en tu trabajo";"Quiero ser indispensable en el trabajo. Analiza mi función actual, mis responsabilidades y la dinámica del equipo.
+A continuación:
+- Identifica las tres habilidades más importantes que me harán indispensable en mi puesto.
+- Desglosa cada habilidad en subhabilidades que pueda desarrollar.
+- Crea un plan de dominio de 90 días con objetivos semanales y acciones diarias.
+- Incluye recursos de aprendizaje, herramientas y puntos de control para medir el progreso.
+Formatear el resultado en una tabla con columnas para el día, la tarea, la habilidad en la que se centra, el tiempo necesario y el resultado».
+Preguntas de seguimiento:
+Puedes pedirle a ChatGPT que haga estas preguntas primero para personalizar el plan:
+1. ¿Cuál es tu cargo actual y en qué sector trabajas?
+2. ¿Cuáles son tus principales responsabilidades?
+3. ¿En qué tipo de trabajo confían más tus compañeros de equipo?
+4. ¿Cuáles son tus objetivos profesionales para los próximos 12 meses?
+Complemento de prompt:
+Si es necesario, haz preguntas aclaratorias antes de crear el plan. A continuación, empieza solo cuando tengas suficiente contexto";"productividad";
+37;"Prompt maestro para desarrollo de software con ingeniería de contexto";"Rol y Objetivo General:
+Actúa como un Ingeniero de Software experto y partner de desarrollo, especializado en la creación de aplicaciones robustas, escalables y mantenibles. Tu objetivo es generar código de alta calidad que se alinee con los estándares y la visión estratégica de nuestro proyecto. Para ello, utilizarás la siguiente arquitectura de contexto que te proporciono, procesando cada componente para comprender no solo la tarea inmediata, sino el ecosistema completo en el que se integra. Tu razonamiento debe basarse en la totalidad de este dossier.
+1. Contexto identitario y de negocio
+Identidad de la Organización: [Describe aquí la misión, visión y valores de la empresa. Ej: ""Somos una startup FinTech dedicada a democratizar el acceso a la inversión para jóvenes.""].
+Voz y Tono de Marca: [Define el tono que debe reflejar la aplicación o la comunicación interna. Ej: ""Profesional pero accesible, evitando la jerga compleja.""].
+Usuario Final: [Describe detalladamente el perfil del usuario final, sus necesidades, conocimientos técnicos y expectativas. Ej: ""Jóvenes de 18 a 25 años, nativos digitales, esperan una interfaz intuitiva y una experiencia gamificada.""].
+2. Contexto situacional actual
+Objetivo Específico de la Tarea: [Describe de forma clara y concisa qué debe hacer el código a generar. Ej: ""Crear un script en Python que se conecte a la API de Binance, obtenga el precio de BTC/USDT cada 5 minutos y lo almacene en una base de datos PostgreSQL.""].
+Limitaciones y Restricciones:
+Presupuesto/Costo Computacional: [Ej: ""Minimizar las llamadas a la API para no exceder el plan gratuito. Optimizar el uso de recursos en la nube.""].
+Tiempo/Rendimiento: [Ej: ""La ejecución completa del script no debe superar los 10 segundos. La latencia de la respuesta de la API interna debe ser inferior a 200ms.""].
+Escalabilidad: [Ej: ""El sistema debe estar preparado para gestionar 10,000 usuarios concurrentes en 6 meses.""].
+Resultados Esperados: [Describe cómo es un resultado exitoso. Ej: ""Una tabla en la base de datos 'prices' con columnas 'timestamp' y 'price_usdt' que se actualiza correctamente.""].
+3. Contexto histórico del proyecto y código base
+Decisiones de Arquitectura Previas: [Describe decisiones importantes que se hayan tomado y deban respetarse. Ej: ""El proyecto utiliza una arquitectura de microservicios. Toda la comunicación entre servicios se realiza a través de eventos con RabbitMQ.""].
+Código Base Existente (Ejemplos Relevantes): [Pega aquí fragmentos de código relevantes que muestren el estilo, patrones o lógica que se debe seguir. Si no es posible, describe la estructura de directorios y los módulos clave. Ej: ""A continuación se muestra cómo gestionamos las conexiones a la base de datos en otros servicios... (pegar código).""].
+Documentación Relevante: [Enlaza o resume cualquier documentación interna, guía de estilo o especificación técnica. Ej: ""Consulta nuestra guía de estilo de Python en Confluence: [enlace]. Se debe seguir el estándar PEP-8.""].
+4. Contexto operativo y estándares
+Stack Tecnológico:
+Lenguajes: [Ej: ""Python 3.11""].
+Frameworks: [Ej: ""FastAPI para la API, SQLAlchemy para el ORM""].
+Librerías Clave: [Ej: ""Pydantic para validación de datos, httpx para peticiones asíncronas""].
+Estándares de Codificación: [Especifica los principios que se deben seguir. Ej: ""Aplicar los principios SOLID y DRY. El código debe ser 'Clean Code', con nombres de variables y funciones descriptivos en inglés.""].
+Prácticas de Testing: [Describe los requisitos de testing. Ej: ""Generar tests unitarios para cada función utilizando Pytest. La cobertura de código debe ser superior al 85%.""].
+CI/CD: [Menciona cualquier consideración relativa al pipeline de integración y despliegue. Ej: ""El código se ejecutará dentro de un contenedor Docker. Proporciona el Dockerfile correspondiente.""].
+5. Contexto predictivo
+Visión Estratégica a Futuro: [Describe hacia dónde se dirige el proyecto. Ej: ""En el futuro, este servicio también deberá obtener precios de otras criptomonedas y de diferentes exchanges. Diseña el código de forma modular para facilitar esta expansión.""].
+Riesgos Anticipados: [Menciona posibles problemas. Ej: ""La API de Binance puede ser inestable. Implementa un sistema de reintentos (retry mechanism) con backoff exponencial y un logging claro de los fallos.""].
+Tarea a Realizar
+Considerando toda la arquitectura de contexto proporcionada, genera el código completo para la aplicación/script solicitado, incluyendo la estructura de archivos, los tests necesarios y la documentación pertinente (como el Dockerfile o un README.md si aplica).
+Formato de Salida:
+[Define aquí el formato de salida deseado. Ej: ""Proporciona el código en bloques separados por archivo, indicando la ruta y el nombre de cada uno. Inicia con la estructura de directorios recomendada.""].
+Interacción:
+Si alguna parte del contexto es insuficiente o ambigua para generar una solución de alta calidad, formula preguntas específicas para obtener la información que necesitas antes de proceder. Estás autorizado a sugerir el uso de herramientas o librerías adicionales si justificas que mejorarán el resultado final en base a los objetivos definidos.
+Por qué este prompt es eficaz según la metodología
+Transforma el Rol de la IA: En lugar de ser un simple generador de código, se le posiciona como un ingeniero de sistemas (Context Engineer), obligándole a razonar sobre el problema de forma holística.
+Estructura Sistemática: El prompt está organizado según los cinco componentes clave de la Ingeniería de Contexto que proporcionaste. Esto convierte una petición vaga en un dossier de ingeniería estructurado.
+Reduce la Ambigüedad: Cada sección ataca una fuente potencial de error o comportamiento no determinista. Al definir desde la voz de marca hasta los estándares de CI/CD, se acota drásticamente el espacio de posibles soluciones, guiando a la IA hacia la respuesta correcta.
+Integra Prácticas de Ingeniería: Incluye explícitamente conceptos como SOLID, DRY, testing y CI/CD, que son fundamentales en el desarrollo de software profesional pero a menudo ignorados en prompts simples.
+Fomenta la Escalabilidad y Mantenibilidad: El ""Contexto Predictivo"" obliga a la IA a no pensar solo en el ahora, sino a generar un código que esté preparado para el futuro, un pilar de la buena ingeniería.
+Crea un Bucle de Retroalimentación: La instrucción final (""Si alguna parte del contexto es insuficiente... pregunta"") convierte la interacción en un diálogo colaborativo, emulando la comunicación real en un equipo de desarrollo y permitiendo el uso de ""llamadas a herramientas"" conceptuales.";"desarrollo";
+38;"API REST en Express + Test";"Crea una API REST en Express para gestionar videojuegos (CRUD). Añade persistencia con SQLite. Todas las operaciones dependen de la base de datos. Usa el endpoint /games para obtener los videojuegos. Si es posible, genera también una pequeña interfaz frontend que consuma la API que sirva de ejemplo para crear, editar y eliminar videojuegos. Añade tests a la API usando Node.js con su test runner nativo, no uses dependencias externas para eso. Y que pueda ejecutar los tests con un script. Instala las dependencias necesarias para que pueda ejecutar el script de tests en cuanto termines";"desarrollo";
