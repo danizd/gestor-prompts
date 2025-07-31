@@ -1,111 +1,119 @@
-# AI Prompt Manager
+# Gestor de Prompts de IA
 
-A full-stack web application for managing and generating AI prompts. Built with Node.js, Express, SQLite, and vanilla JavaScript.
+[![Licencia: MIT](https://img.shields.io/badge/Licencia-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Features
+Una aplicación web full-stack para gestionar y generar prompts de IA de manera eficiente. Esta herramienta te permite organizar, buscar y reutilizar prompts para diferentes modelos de IA.
 
-- **Prompt Generator**: Create custom AI prompts with various parameters
-- **Prompt Management**: CRUD operations for saved prompts
-- **Responsive Design**: Works on desktop and mobile devices
-- **Search & Filter**: Easily find prompts by title, content, or category
-- **Copy to Clipboard**: One-click copy of generated prompts
+## Características
 
-## Prerequisites
+- **Gestión de Prompts**: Crea, lee, actualiza y elimina prompts de IA.
+- **Organización por Categorías**: Clasifica tus prompts por categorías para un acceso rápido.
+- **Sistema de Tareas**: Gestiona tareas relacionadas con el desarrollo y uso de prompts.
+- **API RESTful**: Interfaz de programación completa para integraciones.
+- **Interfaz Web Intuitiva**: Fácil de usar desde cualquier navegador web.
+- **Base de Datos SQLite**: Almacenamiento local de datos sin necesidad de configuración de servidor.
+- **Docker**: Soporte para despliegue en contenedores.
 
-- Node.js v18 or higher
-- npm (comes with Node.js)
+## Requisitos Previos
 
-## Installation
+- Node.js (v14 o superior)
+- npm (v6 o superior) o yarn
+- SQLite3
+- Opcional: Docker para despliegue en contenedores
 
-1. Clone the repository:
+## Instalación
+
+1. Clona el repositorio:
    ```bash
-   git clone <repository-url>
-   cd ai-prompt-manager
+   git clone [URL_DEL_REPOSITORIO]
+   cd ia
    ```
 
-2. Install dependencies:
+2. Instala las dependencias:
    ```bash
    npm install
    ```
 
-## Configuration
-
-Create a `.env` file in the root directory with the following variables:
-
-```
-PORT=4000
-NODE_ENV=development
-```
-
-## Running the Application
-
-1. Start the development server:
+3. Inicia la base de datos:
    ```bash
-   npm start
+   npm run migrate
    ```
 
-2. Open your browser and navigate to:
+4. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
    ```
-   http://localhost:4000
-   ```
 
-## Available Scripts
+5. Abre tu navegador en [http://localhost:4000](http://localhost:4000)
 
-- `npm start`: Start the development server
-- `npm test`: Run tests
-- `npm run lint`: Run ESLint
-- `npm run format`: Format code with Prettier
+## Usando Docker
 
-## Project Structure
+Puedes desplegar la aplicación usando Docker:
+
+```bash
+# Construir la imagen
+docker build -t ai-prompt-manager .
+
+# Ejecutar el contenedor
+docker run -p 4000:4000 ai-prompt-manager
+```
+
+## Uso
+
+### Páginas Principales
+
+- **Inicio**: Vista general de la aplicación
+- **Generador**: Herramienta para crear y probar prompts
+- **Tareas**: Gestión de tareas relacionadas con prompts
+
+### API Endpoints
+
+#### Prompts
+- `GET /api/prompts` - Obtener todos los prompts
+- `GET /api/prompts/:id` - Obtener un prompt específico
+- `POST /api/prompts` - Crear un nuevo prompt
+- `PUT /api/prompts/:id` - Actualizar un prompt existente
+- `DELETE /api/prompts/:id` - Eliminar un prompt
+
+#### Tareas
+- `GET /api/tareas` - Obtener todas las tareas
+- `POST /api/tareas` - Crear/Actualizar múltiples tareas
+- `DELETE /api/tareas` - Eliminar todas las tareas
+
+## Desarrollo
+
+### Estructura del Proyecto
 
 ```
+├── public/           # Archivos estáticos (HTML, CSS, JS, imágenes)
 ├── src/
-│   ├── database/         # Database configuration
-│   ├── routes/          # API routes
-│   ├── tests/           # Test files
-│   └── server.js        # Main server file
-├── public/              # Frontend files
-│   ├── css/             # Stylesheets
-│   ├── js/              # JavaScript files
-│   ├── index.html       # Main page
-│   └── generator.html   # Prompt generator page
+│   ├── database/     # Configuración y migraciones de la base de datos
+│   ├── routes/       # Rutas de la API
+│   ├── server.js     # Punto de entrada de la aplicación
+│   └── tests/        # Pruebas unitarias
 ├── .gitignore
+├── Dockerfile
 ├── package.json
 └── README.md
 ```
 
-## API Endpoints
+### Comandos Útiles
 
-- `GET /api/prompts` - Get all prompts
-- `GET /api/prompts/:id` - Get a specific prompt
-- `POST /api/prompts` - Create a new prompt
-- `PUT /api/prompts/:id` - Update a prompt
-- `DELETE /api/prompts/:id` - Delete a prompt
+- `npm start` - Inicia el servidor en producción
+- `npm run dev` - Inicia el servidor en modo desarrollo con recarga automática
+- `npm test` - Ejecuta las pruebas
+- `npm run migrate` - Ejecuta las migraciones de la base de datos
+- `npm run lint` - Ejecuta el linter
+- `npm run format` - Formatea el código automáticamente
 
-## Testing
+## Contribución
 
-Run the test suite with:
+Las contribuciones son bienvenidas. Por favor, lee nuestras pautas de contribución antes de enviar un pull request.
 
-```bash
-npm test
-```
+## Licencia
 
-## Docker
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
 
-Build and run the application using Docker:
+## Contacto
 
-```bash
-docker build -t ai-prompt-manager .
-docker run -p 4000:4000 ai-prompt-manager
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a new branch
-3. Make your changes
-4. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License.
+¿Preguntas o comentarios? Por favor, abre un issue en el repositorio.
