@@ -2,13 +2,20 @@ import sqlite3 from 'sqlite3';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { promisify } from 'util';
+import fs from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+// Use a dedicated 'data' directory for the database
+const DATA_DIR = join(process.cwd(), 'data');
+if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+}
+
 const DB_PATH = process.env.NODE_ENV === 'test'
   ? ':memory:'
-  : join(process.cwd(), 'prompts.db');
+  : join(DATA_DIR, 'prompts.db');
 
 class Database {
   constructor() {

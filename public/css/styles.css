@@ -276,3 +276,121 @@
       font-size: 1.25rem;
     }
   }
+
+/* Fabric Page Styles */
+#fabric-prompts-container .accordion-item {
+    margin-bottom: 1rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: none;
+}
+
+#fabric-prompts-container .accordion-button {
+    font-weight: 600;
+    color: var(--primary-dark);
+    background-color: var(--white);
+}
+
+#fabric-prompts-container .accordion-button:not(.collapsed) {
+    background-color: var(--primary-light);
+    color: var(--white);
+}
+
+#fabric-prompts-container .accordion-body {
+    background-color: var(--light-gray);
+}
+
+#fabric-prompts-container .accordion-body .accordion-item {
+    margin-bottom: 0.5rem;
+}
+
+#fabric-prompts-container .accordion-body .accordion-button {
+    font-weight: 500;
+    color: var(--dark);
+    background-color: var(--white);
+}
+
+#fabric-prompts-container .accordion-body .accordion-button:not(.collapsed) {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+#fabric-prompts-container .accordion-body .accordion-body {
+    background-color: var(--white);
+}
+
+.fabric-category-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.category-icon {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.fabric-category-body {
+    padding: 1.5rem;
+}
+
+.prompt-card-fabric {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.prompt-header-fabric {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.prompt-header-fabric:hover {
+    background-color: #f8f9fa;
+}
+
+.prompt-title-fabric {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.collapse-icon-fabric {
+    transition: transform 0.3s ease;
+}
+
+.prompt-header-fabric[aria-expanded="true"] .collapse-icon-fabric {
+    transform: rotate(180deg);
+}
+
+.prompt-body-fabric {
+    padding: 1.5rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.prompt-description-fabric {
+    color: var(--medium-gray);
+    margin-bottom: 1rem;
+}
+
+.copy-btn-fabric {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.prompt-content-fabric {
+    background-color: var(--dark-gray);
+    color: var(--light-gray);
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 1rem;
+    white-space: pre-wrap;
+    font-family: 'Fira Code', monospace;
+}

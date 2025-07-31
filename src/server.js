@@ -36,6 +36,10 @@ app.get('/tareas', (req, res) => {
   res.sendFile(join(__dirname, '../public/tareas.html'));
 });
 
+app.get('/fabric', (req, res) => {
+  res.sendFile(join(__dirname, '../public/fabric.html'));
+});
+
 // 404 handler
 app.use((req, res) => {
   res.status(404).json({ error: 'Not Found' });

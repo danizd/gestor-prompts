@@ -1,0 +1,17 @@
+# Ignorar dependencias de Node.js
+node_modules
+
+# ¡IMPORTANTE! Ignorar el archivo de la base de datos local en la raíz
+prompts.db
+
+# Ignorar archivos de Git y del propio Docker
+.git
+.gitignore
+Dockerfile
+
+# Ignorar archivos de registro y otros artefactos
+*.log
+npm-debug.log
+
+# Ignorar archivos de datos que no son necesarios en la imagen
+prompts_2025-07-30.csv

@@ -133,6 +133,9 @@ function handlePromptActions(e) {
         if (confirm('¿Estás seguro de que deseas eliminar este prompt?')) {
             deletePrompt(id);
         }
+    } else if (btn.classList.contains('btn-copy')) {
+        const promptText = card.querySelector('pre').textContent;
+        copyToClipboard(promptText);
     }
 }
 
@@ -226,8 +229,7 @@ function renderPrompts(filteredPrompts = prompts) {
                             <pre class="mb-0" style="white-space: pre-wrap; font-family: inherit; font-size: 0.9rem;">${escapeHtml(prompt.texto)}</pre>
                         </div>
                         <div class="mt-3 d-flex justify-content-end gap-2">
-                            <button class="btn btn-sm btn-outline-secondary" onclick="copyToClipboard('${escapeHtml(prompt.texto).replace(/'/g, "\\'")}')"
-                                    title="Copiar al portapapeles">
+                            <button class="btn btn-sm btn-outline-secondary btn-copy" title="Copiar al portapapeles">
                                 <i class="bi bi-clipboard me-1"></i>Copiar
                             </button>
                         </div>
