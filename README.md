@@ -4,6 +4,15 @@
 
 Una aplicación web full-stack para gestionar y generar prompts de IA de manera eficiente. Esta herramienta te permite organizar, buscar y reutilizar prompts para diferentes modelos de IA.
 
+![Captura de pantalla 1](screenshots/screenshots1.png)
+![Captura de pantalla 2](screenshots/screenshots2.png)
+![Captura de pantalla 3](screenshots/screenshots3.png)
+![Captura de pantalla 4](screenshots/screenshots4.png)
+
+
+
+
+
 ## Características
 
 - **Gestión de Prompts**: Crea, lee, actualiza y elimina prompts de IA.
