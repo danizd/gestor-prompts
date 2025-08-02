@@ -296,7 +296,7 @@ async function saveTasks() {
         saveBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span>Guardando...';
         
         const response = await fetch(API_BASE_URL, {
-            method: 'POST',
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },

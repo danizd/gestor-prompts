@@ -55,40 +55,24 @@ router.post('/', validatePrompt, async (req, res, next) => {
   try {
     const { titulo, texto, categoria } = req.body;
     
-    // Insert the new prompt and get the result
     const result = await db.run(
       'INSERT INTO prompts (titulo, texto, categoria) VALUES (?, ?, ?)',
       [titulo, texto, categoria || null]
     );
     
-    // Check if we have a lastID from the result
-    let insertId;
-    if (result && result.lastID) {
-      insertId = result.lastID;
-    } else {
-      // Fallback: get the last inserted row ID
-      const lastIdResult = await db.get('SELECT last_insert_rowid() as lastID');
-      insertId = lastIdResult ? lastIdResult.lastID : null;
+    if (!result || typeof result.lastID !== 'number') {
+      throw new Error('Failed to create the prompt or retrieve the new ID.');
     }
     
-    if (!insertId) {
-      throw new Error('Failed to retrieve the ID of the inserted prompt');
-    }
-    
-    // Fetch the complete new prompt
-    const newPrompt = await db.get('SELECT * FROM prompts WHERE id = ?', [insertId]);
+    const newPrompt = await db.get('SELECT * FROM prompts WHERE id = ?', [result.lastID]);
     
     if (!newPrompt) {
-      throw new Error('Failed to fetch the newly created prompt');
+      throw new Error('Failed to fetch the newly created prompt.');
     }
     
     res.status(201).json(newPrompt);
   } catch (error) {
-    console.error('Error creating prompt:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
+    next(error);
   }
 });
 
@@ -96,48 +80,38 @@ router.post('/', validatePrompt, async (req, res, next) => {
 router.put('/:id', validatePrompt, async (req, res, next) => {
   try {
     const { titulo, texto, categoria } = req.body;
+    const { id } = req.params;
     
-    // Check if prompt exists
-    const existingPrompt = await db.get('SELECT id FROM prompts WHERE id = ?', [req.params.id]);
-    if (!existingPrompt) {
-      return res.status(404).json({ error: 'Prompt not found' });
-    }
-    
-    await db.run(
+    const result = await db.run(
       'UPDATE prompts SET titulo = ?, texto = ?, categoria = ? WHERE id = ?',
-      [titulo, texto, categoria || null, req.params.id]
+      [titulo, texto, categoria || null, id]
     );
     
-    const updatedPrompt = await db.get('SELECT * FROM prompts WHERE id = ?', [req.params.id]);
+    if (result.changes === 0) {
+      return res.status(404).json({ error: 'Prompt not found' });
+    }
+
+    const updatedPrompt = await db.get('SELECT * FROM prompts WHERE id = ?', [id]);
     res.json(updatedPrompt);
   } catch (error) {
     next(error);
   }
 });
 
-// Delete all prompts (clear database)
-router.delete('/clear', async (req, res) => {
+// --- Destructive Endpoint Disabled for Safety ---
+// The following endpoint is capable of deleting all records from a table.
+// It has been commented out to prevent accidental data loss.
+// To re-enable, ensure proper authentication and authorization checks are implemented.
+/*
+router.delete('/clear', async (req, res, next) => {
   try {
     await db.run('DELETE FROM prompts');
     res.json({ message: 'Todos los prompts han sido eliminados', count: 0 });
   } catch (error) {
-    console.error('Error clearing prompts:', error);
-    res.status(500).json({ error: 'Error al eliminar todos los prompts' });
+    next(error);
   }
 });
-
-let totalPrompts = 0;
-router.get('/', async (req, res) => {
-  try {
-    const prompts = await db.all('SELECT * FROM prompts ORDER BY creado_en DESC');
-    totalPrompts = prompts.length;
-    res.json(prompts);
-  } catch (error) {
-    console.error('Error fetching prompts:', error);
-    res.status(500).json({ error: 'Error al obtener los prompts' });
-  }
-});
-
+*/
 
 // Delete a prompt
 router.delete('/:id', async (req, res, next) => {

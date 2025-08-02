@@ -1,7 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert';
+import { promisify } from 'util';
 import { db } from '../database/database.js';
-import app from '../server.js';
+import app, { server } from '../server.js';
 import supertest from 'supertest';
 
 const request = supertest(app);
@@ -21,8 +22,10 @@ test.beforeEach(async () => {
 });
 
 test.after(async () => {
-  // Close the database connection after all tests
+  // Close the database connection and server after all tests
+  const closeServer = promisify(server.close.bind(server));
   await db.close();
+  await closeServer();
 });
 
 test('GET /api/prompts - should return empty array when no prompts', async (t) => {

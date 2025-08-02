@@ -28,22 +28,31 @@ const validateTasks = (req, res, next) => {
   next();
 };
 
+const validateSingleTask = (req, res, next) => {
+  const { tarea } = req.body;
+
+  if (!tarea || typeof tarea !== 'string') {
+    return res.status(400).json({
+      error: 'Invalid data',
+      message: 'A valid "tarea" field is required.'
+    });
+  }
+
+  next();
+};
+
 // Get all tasks
-router.get('/', async (req, res) => {
+router.get('/', async (req, res, next) => {
   try {
     const tasks = await db.all('SELECT * FROM tareas ORDER BY id ASC');
     res.json(tasks);
   } catch (error) {
-    console.error('Error fetching tasks:', error);
-    res.status(500).json({
-      error: 'Internal server error',
-      message: 'Failed to fetch tasks'
-    });
+    next(error);
   }
 });
 
 // Save/Update all tasks (replace all existing tasks)
-router.post('/', validateTasks, async (req, res) => {
+router.put('/', validateTasks, async (req, res, next) => {
   try {
     const { tasks } = req.body;
     
@@ -78,20 +87,16 @@ router.post('/', validateTasks, async (req, res) => {
     } catch (error) {
       // Rollback on error
       await db.run('ROLLBACK');
-      throw error;
+      throw error; // Re-throw to be caught by the outer catch block
     }
     
   } catch (error) {
-    console.error('Error saving tasks:', error);
-    res.status(500).json({
-      error: 'Internal server error',
-      message: 'Failed to save tasks'
-    });
+    next(error);
   }
 });
 
 // Get a single task by ID
-router.get('/:id', async (req, res) => {
+router.get('/:id', async (req, res, next) => {
   try {
     const task = await db.get('SELECT * FROM tareas WHERE id = ?', [req.params.id]);
     
@@ -104,27 +109,27 @@ router.get('/:id', async (req, res) => {
     
     res.json(task);
   } catch (error) {
-    console.error('Error fetching task:', error);
-    res.status(500).json({
-      error: 'Internal server error',
-      message: 'Failed to fetch task'
-    });
+    next(error);
   }
 });
 
-// Delete all tareas (clear database)
-router.delete('/clear', async (req, res) => {
+// --- Destructive Endpoint Disabled for Safety ---
+// The following endpoint is capable of deleting all records from a table.
+// It has been commented out to prevent accidental data loss.
+// To re-enable, ensure proper authentication and authorization checks are implemented.
+/*
+router.delete('/clear', async (req, res, next) => {
     try {
         await db.run('DELETE FROM tareas');
         res.json({ message: 'Todas las tareas han sido eliminadas', count: 0 });
     } catch (error) {
-        console.error('Error clearing tareas:', error);
-        res.status(500).json({ error: 'Error al eliminar todas las tareas' });
+        next(error);
     }
 });
+*/
 
 // Delete a task
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', async (req, res, next) => {
   try {
     // Check if task exists
     const existingTask = await db.get('SELECT id FROM tareas WHERE id = ?', [req.params.id]);
@@ -137,31 +142,17 @@ router.delete('/:id', async (req, res) => {
     
     await db.run('DELETE FROM tareas WHERE id = ?', [req.params.id]);
     
-    res.json({ 
-      message: 'Task deleted successfully',
-      id: req.params.id
-    });
+    res.status(204).send();
     
   } catch (error) {
-    console.error('Error deleting task:', error);
-    res.status(500).json({
-      error: 'Internal server error',
-      message: 'Failed to delete task'
-    });
+    next(error);
   }
 });
 
 // Update a single task
-router.put('/:id', async (req, res) => {
+router.put('/:id', validateSingleTask, async (req, res, next) => {
   try {
     const { tarea, recurso } = req.body;
-    
-    if (!tarea || typeof tarea !== 'string') {
-      return res.status(400).json({
-        error: 'Invalid data',
-        message: 'Task must have a valid "tarea" field'
-      });
-    }
     
     // Check if task exists
     const existingTask = await db.get('SELECT id FROM tareas WHERE id = ?', [req.params.id]);
@@ -181,11 +172,7 @@ router.put('/:id', async (req, res) => {
     res.json(updatedTask);
     
   } catch (error) {
-    console.error('Error updating task:', error);
-    res.status(500).json({
-      error: 'Internal server error',
-      message: 'Failed to update task'
-    });
+    next(error);
   }
 });
 
