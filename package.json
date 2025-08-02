@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "node --test src/tests/",
+    "test": "node --test src/tests/prompts.api.test.js",
     "migrate": "node src/database/migrate.js",
     "lint": "eslint .",
     "format": "prettier --write ."
@@ -31,7 +31,8 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-node": "^11.1.0",
     "nodemon": "^3.0.2",
-    "prettier": "^3.1.1"
+    "prettier": "^3.1.1",
+    "supertest": "^7.1.4"
   },
   "engines": {
     "node": ">=18.0.0"

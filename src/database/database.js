@@ -66,8 +66,3 @@ class Database {
 }
 
 export const db = new Database();
-
-// Close the database connection when the process exits
-process.on('exit', () => db.close());
-process.on('SIGINT', () => process.exit());
-process.on('SIGTERM', () => process.exit());
